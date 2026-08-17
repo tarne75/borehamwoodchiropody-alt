@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Borehamwood Chiropody and Podiatry">
+  <rect width="48" height="48" rx="13" fill="#6E8F22"/>
+  <g fill="#fff">
+    <!-- sole -->
+    <path d="M27.4 18.9c4 1.3 5.1 5.3 3.9 8.6-.8 2.3-2.3 3.9-2.9 5.8-.5 1.8-.4 3.7-1.6 5.2-1.5 2-4.6 2.6-7 1.5-2.5-1.1-3.8-3.7-3.3-6.2.5-2.3 2.1-4.1 2.7-6.3.6-2.2.4-4.7 1.6-6.6 1.2-1.9 4.1-3 6.6-2z"/>
+    <!-- toes -->
+    <ellipse cx="18.7" cy="16.4" rx="3.3" ry="2.8" transform="rotate(-26 18.7 16.4)"/>
+    <ellipse cx="24.6" cy="12.5" rx="2.4" ry="2.1" transform="rotate(-16 24.6 12.5)"/>
+    <ellipse cx="29.2" cy="12.4" rx="2.1" ry="1.85" transform="rotate(-6 29.2 12.4)"/>
+    <ellipse cx="32.9" cy="13.7" rx="1.85" ry="1.6" transform="rotate(6 32.9 13.7)"/>
+    <ellipse cx="35.7" cy="16" rx="1.6" ry="1.4" transform="rotate(16 35.7 16)"/>
+  </g>
+</svg>
