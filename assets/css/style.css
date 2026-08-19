@@ -1084,11 +1084,39 @@ button, input, select, textarea { font: inherit; color: inherit; }
   padding-block: 1.4rem;
   border-top: 1px solid rgb(255 255 255 / 0.1);
   font-size: var(--fs-xs);
-  color: rgb(255 255 255 / 0.45);
+  /* 0.5 alpha over --ink is 5.24:1. The previous 0.45 measured 4.46:1 — just
+     under AA — so this row was the one place the site missed the standard. */
+  color: rgb(255 255 255 / 0.5);
 }
 .footer-bottom nav { display: flex; flex-wrap: wrap; gap: 1.1rem; }
 .footer-bottom a { color: inherit; text-decoration: none; }
 .footer-bottom a:hover { color: #fff; }
+
+/* Legal links and the build credit, grouped so they sit together on the right */
+.footer-bottom-end {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1.5rem;
+}
+
+/* Build credit. Deliberately NOT dimmed below the surrounding text: on this
+   footer, white below ~0.92 alpha drops under 4.5:1, so any further fade would
+   make it the one element on the site that fails AA. It reads as secondary
+   through position (last, far right), size and the absence of an underline. */
+.footer-credit {
+  color: inherit;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: color 0.16s var(--ease);
+}
+.footer-credit:hover,
+.footer-credit:focus-visible { color: #fff; }
+
+@media (max-width: 640px) {
+  .footer-bottom { justify-content: flex-start; }
+  .footer-bottom-end { width: 100%; justify-content: space-between; }
+}
 
 /* --------------------------------------------------------- LOADING / EMPTY */
 .state {
