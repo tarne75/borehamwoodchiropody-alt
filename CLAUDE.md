@@ -9,13 +9,13 @@ See **[BRAND.md](BRAND.md)** for the palette, logo, typography and contrast rule
 
 ## 1. What this replaces
 
-The original site ran on the itseeze/Spoton.net website builder. It was 11 separate
-pages carrying roughly 82KB of generated CSS, a bespoke responsive-image runtime, a
+The original site ran on the itseeze/Spoton.net website builder. It was 12 separate
+pages (10 content, 2 legal) carrying 79KB of generated CSS, a bespoke responsive-image runtime, a
 cookie-consent framework, Google Analytics (both GA4 and a Universal Analytics
 property that stopped collecting data in 2023), and a layout system built on
 utility classes like `w-flex-basis-1-xs wFlexBasis1Xs`.
 
-This rebuild is a single page of hand-written HTML, one 34KB stylesheet, one 18KB
+This rebuild is a single page of hand-written HTML, one 35KB stylesheet, one 18KB
 script, and no third-party JavaScript at all.
 
 ### Content mapping
@@ -232,7 +232,7 @@ to Latin and `woff2`-only.
 ## 7. Accessibility
 
 - Skip link to `#main`.
-- Contrast: all text meets WCAG AA. The original brand green failed at 2.95:1 on white
+- Contrast: all text meets WCAG AA. The original brand green failed at 2.46:1 on white
   and was darkened for text use — see BRAND.md §1 for the full audit.
 - Focus is never suppressed. `:focus-visible` gets a 2px brand outline with offset.
 - The mobile menu button carries `aria-expanded` and `aria-controls`; Esc and

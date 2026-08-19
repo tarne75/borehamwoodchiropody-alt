@@ -14,7 +14,7 @@ alongside it, plus a near-black `#212121` and an off-white `#ebebeb`.
 
 ### The problem with the original green
 
-`#8fb13b` on white gives a contrast ratio of **2.95:1**. WCAG AA requires 4.5:1 for
+`#8fb13b` on white gives a contrast ratio of **2.46:1**. WCAG AA requires 4.5:1 for
 normal-sized text. The original site used it for body links and small text, which
 means some of that text was not legible to users with reduced vision.
 
@@ -27,17 +27,17 @@ where contrast rules are looser.
 | Token | Value | Contrast on white | Used for |
 |---|---|---|---|
 | `--brand` | `#5f7d1d` | **4.73:1** ✅ AA | Links, eyebrow labels, prices, primary buttons, focus rings |
-| `--brand-mid` | `#6e8f22` | 3.85:1 | Logo mark fill only (not text) |
-| `--brand-bright` | `#8fb13b` | 2.95:1 ❌ | Large fills and tint generation only — **never text on white** |
-| `--brand-light` | `#a7c758` | 1.97:1 ❌ | Accents on dark backgrounds only (hero heading emphasis, dark-card icons) |
-| `--brand-deep` | `#3f5413` | 9.16:1 ✅ AAA | Utility strip background, contact card background, button hover |
+| `--brand-mid` | `#6e8f22` | 3.74:1 | Logo mark fill only (not text) |
+| `--brand-bright` | `#8fb13b` | 2.46:1 ❌ | Large fills and tint generation only — **never text on white** |
+| `--brand-light` | `#a7c758` | 1.92:1 ❌ | Accents on dark backgrounds only (hero heading emphasis, dark-card icons) |
+| `--brand-deep` | `#3f5413` | 8.44:1 ✅ AAA | Utility strip background, contact card background, button hover |
 
 ### Neutrals
 
 | Token | Value | Contrast on white | Used for |
 |---|---|---|---|
-| `--ink` | `#15191c` | 17.4:1 | Headings, strong text, dark footer background |
-| `--ink-2` | `#333c43` | 10.6:1 | Body copy |
+| `--ink` | `#15191c` | 17.68:1 | Headings, strong text, dark footer background |
+| `--ink-2` | `#333c43` | 11.24:1 | Body copy |
 | `--muted` | `#5c6771` | 5.78:1 ✅ AA | Secondary copy, section subheads, card body |
 | `--muted-2` | `#6b7883` | 4.53:1 ✅ AA | Placeholders, small captions — this is the floor, do not go lighter |
 | `--line` | `#e5e9ea` | — | Card and input borders |
@@ -62,7 +62,7 @@ green ever changes, the tints follow automatically.
 
 - Text on white → `--brand`, `--ink`, `--ink-2`, `--muted`, `--muted-2`. Nothing lighter.
 - Text on `--brand-deep` or `--ink` → white at 100%, or ≥68% opacity for secondary.
-  `--brand-light` at full strength on `--brand-deep` is 4.39:1, marginally short of AA;
+  `--brand-light` at full strength on `--brand-deep` is 4.40:1, marginally short of AA;
   the utility strip lifts it with `color-mix(… 62%, #fff)` to clear it.
 - Decoration (icons, rules, fills) is exempt from the 4.5:1 rule but should still
   clear 3:1 where it carries meaning.
