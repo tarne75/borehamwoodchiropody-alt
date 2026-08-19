@@ -49,7 +49,40 @@
     "opens": "09:30",
     "closes": "17:00"
   }],
-  "founder": { "@type": "Person", "name": "Edwina Bogush", "jobTitle": "Podiatrist, BSc" }
+  "founder": {
+    "@type": "Person",
+    "name": "Edwina Bogush",
+    "jobTitle": "Podiatrist, BSc",
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "degree",
+        "name": "BSc in Podiatry",
+        "recognizedBy": { "@type": "Organization", "name": "Sussex School of Podiatry" }
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Professional membership",
+        "name": "Member of the Royal College of Podiatry",
+        "identifier": "12282",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Royal College of Podiatry",
+          "url": "https://rcpod.org.uk/"
+        }
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Statutory registration",
+        "name": "Registered Chiropodist / Podiatrist",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Health and Care Professions Council",
+          "url": "https://www.hcpc-uk.org/"
+        }
+      }
+    ]
+  }
 }
 </script>
 </head>
@@ -160,7 +193,7 @@
       </li>
       <li>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M5 21a7 7 0 0 1 14 0"/></svg>
-        <span>Member of the <strong>College of Podiatry</strong></span>
+        <span>Member of the <strong>Royal College of Podiatry</strong></span>
       </li>
       <li>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
@@ -383,7 +416,7 @@
 
   <!-- ============================================================== ABOUT -->
   <section class="section section--alt" id="about">
-    <div class="wrap split">
+    <div class="wrap split split--sticky">
       <div class="split-media reveal">
         <img src="assets/img/edwina.webp" alt="Edwina Bogush, podiatrist, at the practice" width="900" height="836" loading="lazy">
       </div>
@@ -394,8 +427,8 @@
           Edwina Paul (now Bogush) has been in practice for nearly 30 years and has a wealth of
           knowledge and experience about the podiatry world. She trained at Sussex School of
           Podiatry, gaining a BSc in Podiatry, State Registration and membership of the HCPC, and
-          is a member of the College of Podiatry — the profession's governing body, which protects
-          both its members and the public.
+          is a member of the Royal College of Podiatry — the profession's professional body, which
+          supports its members and safeguards standards for the public.
         </p>
         <p>
           She also holds a Local Anaesthetic certificate and M.C.Pod., and qualified in reflexology
@@ -415,6 +448,61 @@
           7 half marathons and numerous 5k and 10k runs including the infamous parkrun, Tough
           Mudders and the Gherkin Run twice, raising money for various charities.
         </p>
+
+        <!-- Qualifications & registration.
+             Text-first rather than a badge image: the accreditation graphic on the
+             previous site showed "The Society of Chiropodists & Podiatrists", a name
+             retired in June 2018, alongside "The College of Podiatry", which became the
+             Royal College of Podiatry in July 2021. Current names are used here.
+             TODO: add Edwina's HCPC registration number (format CHxxxxx) to the HCPC
+             row below, and link it to her entry on the public register. -->
+        <div class="creds reveal">
+          <h3 class="creds-title">Qualifications &amp; registration</h3>
+          <ul class="creds-list">
+            <li class="cred">
+              <span class="cred-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5 12 4l9 4.5-9 4.5Z"/><path d="M7 11v4.5c0 1.4 2.2 2.5 5 2.5s5-1.1 5-2.5V11"/><path d="M21 8.5V14"/></svg>
+              </span>
+              <span class="cred-body">
+                <span class="cred-name">BSc in Podiatry</span>
+                <span class="cred-meta">Sussex School of Podiatry · State Registration</span>
+              </span>
+            </li>
+
+            <li class="cred">
+              <span class="cred-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v5.5c0 4.2 2.9 8 7 9.5 4.1-1.5 7-5.3 7-9.5V6Z"/><path d="m9 12 2 2 4-4"/></svg>
+              </span>
+              <span class="cred-body">
+                <span class="cred-name">Member of the Royal College of Podiatry</span>
+                <span class="cred-meta">Membership no. <strong class="cred-no">12282</strong></span>
+              </span>
+            </li>
+
+            <li class="cred">
+              <span class="cred-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6Z"/><path d="M14 3v4h4"/><path d="m9.5 14 1.7 1.7 3.6-3.6"/></svg>
+              </span>
+              <span class="cred-body">
+                <span class="cred-name">Registered with the HCPC</span>
+                <span class="cred-meta">
+                  Health and Care Professions Council —
+                  <a href="https://www.hcpc-uk.org/check-the-register/" rel="noopener">check the register</a>
+                </span>
+              </span>
+            </li>
+
+            <li class="cred">
+              <span class="cred-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8.5" r="4.5"/><path d="M8.5 12.5 7 21l5-2.5L17 21l-1.5-8.5"/></svg>
+              </span>
+              <span class="cred-body">
+                <span class="cred-name">M.C.Pod. · Local Anaesthetic certificate</span>
+                <span class="cred-meta">Qualified in reflexology, 2004</span>
+              </span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>

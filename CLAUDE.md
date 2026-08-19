@@ -25,7 +25,7 @@ Every page of the original is accounted for. Nothing was dropped.
 | Original page | Where it went now |
 |---|---|
 | Home (welcome + K Laser) | Hero, `#welcome` split, `#laser` |
-| About Us | `#about` — merged with the practitioner bio from the home page |
+| About Us | `#about` — merged with the practitioner bio from the home page, plus the qualifications panel |
 | Techniques | `#treatments` — six cards |
 | Services › Conditions Treated | `#conditions` — data-driven grid |
 | Services › Nail Fungus Treatment | Folded into `#laser` |
@@ -50,6 +50,19 @@ Wording was retained. Where it changed, it was for one of these reasons:
 - **The nail fungus page** duplicated most of the conditions and K Laser copy. The
   unique material (the onychomycosis explanation, the treatment description, the
   bullet list) was kept; the repetition was not.
+- **The accreditation badge was reinstated as text, not as the original image.** The old
+  About page carried a 318×159px bitmap reading "The COLLEGE of PODIATRY / The SOCIETY of
+  CHIROPODISTS & PODIATRISTS" with `www.scpod.org`, followed by a bare `12282`. Both of
+  those names are dead: the Society name was retired in June 2018 and the College became
+  the **Royal College of Podiatry** in July 2021. Reproducing a superseded third-party
+  logo on a new site is worse than the gap it fills, so `#about` now carries a
+  `.creds` panel using current names, with 12282 labelled as what it is — an RCPod
+  membership number, not an HCPC one. The prose and the hero trust strip were updated to
+  "Royal College of Podiatry" to match.
+- **"Governing body" corrected to "professional body."** The original described the College
+  as "our professional governing body". It isn't: the Royal College of Podiatry is the
+  professional body and trade union, and the HCPC is the statutory regulator. On a
+  healthcare site that distinction is worth getting right.
 - **Duplicate testimonial removed.** "She knows every thing about verrucae" and the
   laser testimonial were both retained; nothing else was cut.
 
@@ -282,24 +295,31 @@ Ordered by how much they matter.
    supplied. It appears in six places: the header utility strip, the contact card, the
    products section, the footer, the JSON-LD block in `index.html`, and the data
    controller clause in `privacy.html`. Grep for `78a` to change them together.
-2. **The email address is new.** `info@borehamwoodchiropody.co.uk` did not exist
+2. **Edwina's HCPC registration number is missing.** The site states she is HCPC
+   registered but publishes no number, because the old site never did either. HCPC numbers
+   for chiropodists/podiatrists take the form `CHxxxxx`, and `12282` is *not* one — it is
+   her Royal College membership number. Ask her for the CH number, then replace the
+   HCPC row in the `.creds` panel in `index.html` (search for the `TODO` comment above it)
+   and link it to her entry on <https://www.hcpc-uk.org/check-the-register/>. This is the
+   one credential a patient can independently verify, so it is worth chasing.
+3. **The email address is new.** `info@borehamwoodchiropody.co.uk` did not exist
    anywhere on the original site. **Confirm the mailbox exists and is monitored before
    going live**, or enquiries sent to it will disappear silently.
-3. **Opening hours come from the Google Business Profile**, not from the practice
+4. **Opening hours come from the Google Business Profile**, not from the practice
    directly — Mon–Fri 09:30–17:00, closed weekends. Worth confirming with Edwina, and
    they're in `data.js` ready to move to a sheet.
-4. **The practitioner portrait is the weakest asset on the site.** `edwina.webp` is
+5. **The practitioner portrait is the weakest asset on the site.** `edwina.webp` is
    upscaled from a low-resolution, poorly-lit original and it sits in the About
    section at a size that shows every flaw. One phone photo taken near a window would
    noticeably lift the whole page. This is the single highest-return change available.
-5. **The before/after nail images** came from the original site's clinical-study
+6. **The before/after nail images** came from the original site's clinical-study
    section, whose copy attributed the study and testimonial to a US clinic
    (*Betty B., Surfside, FL*). That attribution was dropped as it isn't the practice's
    own patient. The images are captioned as clinical study images. If they are not
    licensed to the practice, replace or remove them.
-6. **Testimonials are unattributed beyond a first name and town**, as on the original.
+7. **Testimonials are unattributed beyond a first name and town**, as on the original.
    Fine as-is, but Google reviews would carry more weight if there are any.
-7. **The K Laser claims are specific and medical** — "NICE-approved", "no side
+8. **The K Laser claims are specific and medical** — "NICE-approved", "no side
    effects", percentages for onychomycosis prevalence. All carried over verbatim from
    the original site. They should be checked against current ASA and CAP guidance for
    health claims before launch; the responsibility sits with the practice, not the site.
