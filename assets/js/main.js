@@ -119,6 +119,7 @@
     shield: '<path d="M12 3 5 6v5.5c0 4.2 2.9 8 7 9.5 4.1-1.5 7-5.3 7-9.5V6Z"/>',
     crack: '<path d="M4 4h16v16H4z" opacity=".25"/><path d="m9 3 2.5 6L8 12l4 3-1.5 6"/>',
     heart: '<path d="M12 20s-7-4.4-7-9.3A4.2 4.2 0 0 1 12 8a4.2 4.2 0 0 1 7 2.7C19 15.6 12 20 12 20Z"/>',
+    hand: '<path d="M9 11V4.6a1.6 1.6 0 0 1 3.2 0V11"/><path d="M12.2 10.4V3.4a1.6 1.6 0 0 1 3.2 0V11"/><path d="M15.4 11V5.6a1.6 1.6 0 0 1 3.2 0V14a7 7 0 0 1-7 7h-.6a6 6 0 0 1-4.6-2.2L4 15.6a1.7 1.7 0 0 1 2.5-2.2L9 15.6V11"/>',
     dot: '<circle cx="12" cy="12" r="7"/>',
 
     stethoscope: '<path d="M6 3v5a4 4 0 0 0 8 0V3"/><path d="M6 3H4M14 3h2M10 12v3a5 5 0 0 0 10 0v-1"/><circle cx="20" cy="11" r="2"/>',
@@ -294,11 +295,19 @@
         const closed = !h.open || !h.close;
         const time = closed ? h.note || 'Closed' : `${h.open} – ${h.close}`;
         const isToday = h.day.trim().toLowerCase() === todayName.toLowerCase();
+        /* Home visits are per-day and optional — the sub-line only appears on
+           days the sheet gives a window for. */
+        const visits = !closed && h.homevisits ? h.homevisits.trim() : '';
         return `
         <div class="hours-row${isToday ? ' is-today' : ''}${closed ? ' is-closed' : ''}">
           <span class="hours-day">${esc(h.day)}</span>
           <span class="hours-time">${esc(time)}</span>
-        </div>`;
+        </div>
+        ${visits ? `
+        <div class="hours-visit">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V20H4Z"/><path d="M10 20v-5h4v5"/></svg>
+          <span>Home visits <span class="hours-visit-time">${esc(visits)}</span></span>
+        </div>` : ''}`;
       })
       .join('');
   }

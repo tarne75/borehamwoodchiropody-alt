@@ -75,6 +75,15 @@ window.BWC_DATA = {
         status: ''
       },
       {
+        name: 'Finger Nails',
+        description:
+          'We are now combining laser treatment with Poderm topical nail serums, this is more effective than laser alone.',
+        category: 'Nails',
+        icon: 'hand',
+        order: '65',
+        status: ''
+      },
+      {
         name: "Athlete's Foot",
         description:
           'Fungal infection of the skin which usually starts between the toes and can lead to an itchy feeling in and around the infected area. It can also cause scaling and flaking, and lead to fungal nails. Usually transmitted in moist or damp conditions where people walk barefoot, such as communal showers.',
@@ -129,18 +138,18 @@ window.BWC_DATA = {
   fees: {
     url: '',
     rows: [
-      { group: 'Appointments', treatment: 'New patient', price: '£40.00', note: '', order: '10', status: '' },
+      { group: 'Appointments', treatment: 'New patient', price: '£45.00', note: '', order: '10', status: '' },
       { group: 'Appointments', treatment: 'Follow-up', price: '£35.00', note: '', order: '20', status: '' },
       { group: 'Appointments', treatment: 'Senior new patient', price: '£35.00', note: '', order: '30', status: '' },
-      { group: 'Appointments', treatment: 'Senior follow-up', price: '£30.00', note: '', order: '40', status: '' },
-      { group: 'Appointments', treatment: 'Local home visits', price: 'from £35.00', note: 'For patients unable to get to the surgery easily.', order: '50', status: '' },
+      { group: 'Appointments', treatment: 'Senior follow-up', price: '£32.00', note: '', order: '40', status: '' },
+      { group: 'Appointments', treatment: 'Local home visits', price: 'from £40.00', note: 'For patients unable to get to the surgery easily.', order: '50', status: '' },
 
       { group: 'Laser treatment', treatment: 'Laser treatment', price: '£55.00 – £85.00', note: 'Per session.', order: '60', status: '' },
-      { group: 'Laser treatment', treatment: 'Laser for fungal nail', price: 'from £45.00', note: 'Single nail. £85.00 for all ten nails, usually requiring 6 treatments.', order: '70', status: '' },
-      { group: 'Laser treatment', treatment: 'Laser for MSK', price: 'from £55.00', note: 'Per treatment, depending on condition.', order: '80', status: '' },
+      { group: 'Laser treatment', treatment: 'Laser for fungal nail', price: 'from £45.00', note: 'Will depend how many nails need treatment, usually requiring 6 treatments.', order: '70', status: '' },
+      { group: 'Laser treatment', treatment: 'Laser for MSK', price: 'from £45.00', note: 'Per treatment, depending on condition.', order: '80', status: '' },
 
       { group: 'Verrucae', treatment: 'Verrucae treatment', price: '£40.00 – £45.00', note: 'Per treatment, depending on type of treatment.', order: '90', status: '' },
-      { group: 'Verrucae', treatment: 'Child verrucae treatment', price: 'from £35.00', note: 'Per treatment.', order: '100', status: '' },
+      { group: 'Verrucae', treatment: 'Child verrucae treatment', price: '£35.00', note: 'Per treatment.', order: '100', status: '' },
 
       { group: 'Nails & orthotics', treatment: 'Non-surgical removal of a single nail', price: '£45.00', note: '', order: '110', status: '' },
       { group: 'Nails & orthotics', treatment: 'Nail reconstruction', price: '£35.00', note: 'Single nail.', order: '120', status: '' },
@@ -214,19 +223,22 @@ window.BWC_DATA = {
   },
 
   /* -------------------------------------------------------- OPENING HOURS --
-     Sheet columns: day | open | close | note | order | status
+     Sheet columns: day | open | close | homevisits | note | order | status
      Leave `open` and `close` blank for a closed day. `note` overrides both.
+     `homevisits` is the window in which home visits can be booked that day —
+     leave blank for clinic-only days. Any text is rendered verbatim, so
+     "Any time" works as well as a time range.
      Source for the phase 1 values: the practice's Google Business Profile.   */
   hours: {
     url: '',
     rows: [
-      { day: 'Monday', open: '09:30', close: '17:00', note: '', order: '1', status: '' },
-      { day: 'Tuesday', open: '09:30', close: '17:00', note: '', order: '2', status: '' },
-      { day: 'Wednesday', open: '09:30', close: '17:00', note: '', order: '3', status: '' },
-      { day: 'Thursday', open: '09:30', close: '17:00', note: '', order: '4', status: '' },
-      { day: 'Friday', open: '09:30', close: '17:00', note: '', order: '5', status: '' },
-      { day: 'Saturday', open: '', close: '', note: 'Closed', order: '6', status: '' },
-      { day: 'Sunday', open: '', close: '', note: 'Closed', order: '7', status: '' }
+      { day: 'Monday', open: '09:30', close: '17:30', homevisits: '', note: '', order: '1', status: '' },
+      { day: 'Tuesday', open: '09:30', close: '17:30', homevisits: '09:30 – 13:30', note: '', order: '2', status: '' },
+      { day: 'Wednesday', open: '09:30', close: '17:30', homevisits: '09:30 – 13:30', note: '', order: '3', status: '' },
+      { day: 'Thursday', open: '09:30', close: '17:30', homevisits: '09:30 – 13:30', note: '', order: '4', status: '' },
+      { day: 'Friday', open: '09:30', close: '17:30', homevisits: 'Any time', note: '', order: '5', status: '' },
+      { day: 'Saturday', open: '', close: '', homevisits: '', note: 'Closed', order: '6', status: '' },
+      { day: 'Sunday', open: '', close: '', homevisits: '', note: 'Closed', order: '7', status: '' }
     ]
   }
 };
