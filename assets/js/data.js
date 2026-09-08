@@ -233,10 +233,10 @@ window.BWC_DATA = {
     url: '',
     rows: [
       { day: 'Monday', open: '09:30', close: '17:30', homevisits: '', note: '', order: '1', status: '' },
-      { day: 'Tuesday', open: '09:30', close: '17:30', homevisits: '09:30 – 13:30', note: '', order: '2', status: '' },
-      { day: 'Wednesday', open: '09:30', close: '17:30', homevisits: '09:30 – 13:30', note: '', order: '3', status: '' },
-      { day: 'Thursday', open: '09:30', close: '17:30', homevisits: '09:30 – 13:30', note: '', order: '4', status: '' },
-      { day: 'Friday', open: '09:30', close: '17:30', homevisits: 'Any time', note: '', order: '5', status: '' },
+      { day: 'Tuesday', open: '09:30', close: '13:30', homevisits: '13:30 – 17:00', note: '', order: '2', status: '' },
+      { day: 'Wednesday', open: '09:30', close: '13:30', homevisits: '13:30 – 17:00', note: '', order: '3', status: '' },
+      { day: 'Thursday', open: '09:30', close: '13:30', homevisits: '13:30 – 17:00', note: '', order: '4', status: '' },
+      { day: 'Friday', open: '10:00', close: '13:00', homevisits: '13:30 – 17:00', note: '', order: '5', status: '' },
       { day: 'Saturday', open: '', close: '', homevisits: '', note: 'Closed', order: '6', status: '' },
       { day: 'Sunday', open: '', close: '', homevisits: '', note: 'Closed', order: '7', status: '' }
     ]
