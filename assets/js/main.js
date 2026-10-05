@@ -157,7 +157,7 @@
 
     if (!list.length) {
       grid.innerHTML = `<p class="state">Condition list unavailable — please call the practice on
-        <a href="tel:+442089539052">020 8953 9052</a> and we'll talk you through it.</p>`;
+        <a href="tel:+447815157055">07815 157055</a> and we'll talk you through it.</p>`;
       return;
     }
 
@@ -189,7 +189,7 @@
 
     if (!list.length) {
       host.innerHTML = `<p class="state">Fee list unavailable — please call
-        <a href="tel:+442089539052">020 8953 9052</a> for current prices.</p>`;
+        <a href="tel:+447815157055">07815 157055</a> for current prices.</p>`;
       return;
     }
 
@@ -488,7 +488,7 @@
         );
       } catch (err) {
         say(
-          'Sorry, something went wrong sending your message. Please call us on 020 8953 9052 or 07815 157055 instead.',
+          'Sorry, something went wrong sending your message. Please call us on 07815 157055 instead.',
           false
         );
         console.error('[BWC] form error:', err);
